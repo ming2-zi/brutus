@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブルータスごっこ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="Brutus.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ブルータスごっこ</h1>
+        <br>
+        <p>誰でも共和制ローマの元老院議員ブルータス(ブルトゥス)の気分になれます。</p>
+        <p>カエサル(シーザー)の有名な名言「ブルータス、お前もか！」を自分の名前でやってみよう！</p>
+        <p>ロミオになりたいかたは<a href="https://ming2-zi.github.io/romeo/romeo/romeo.html">こちら</a></p>
+        <hr>
+        <br>
+        <span id="typewriter"></span>
+        <p>名前を<big><b>ひらがなで</b></big>入力してください</p>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="name" class="materialize-textarea">ぶるーたす</textarea>
+                    <label for="name"><big>名前</big></label>
+                </div>
+                </div>
+            </form>
+        </div>
+        <form id="check" name="form1" action="#">
+            <p>
+                <label>
+                <input name="group1" type="radio" value="1" onchange="Latin()" checked />
+                <span>ラテン語</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                <input name="group1" type="radio" value="2" onchange="English()" />
+                <span>英語</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                <input name="group1" type="radio" value="3" onchange="Japanese()" />
+                <span>日本語</span>
+                </label>
+            </p>
+        </form>
+        <br>
+        <button class="waves-effect waves-light btn-large" onclick="convertBrutus()">Let's be Brutus</button>
+        <br>
+        <br>
+        <div class="box">
+            <p id="converted">Et tu Brute!</p>
+        </div>
+        <br>
+        <br>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="Brutus.js"></script>
+</body>
+</html>
